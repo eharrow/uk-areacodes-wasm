@@ -4,7 +4,6 @@
 
 extern crate wasm_bindgen_test;
 use uk_areacodes::api::find_by_code;
-use uk_areacodes_wasm::*;
 use wasm_bindgen_test::*;
 
 wasm_bindgen_test_configure!(run_in_browser);
