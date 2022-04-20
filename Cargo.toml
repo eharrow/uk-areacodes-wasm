@@ -1,7 +1,10 @@
 [package]
 authors = ["Ewan Harrow <ewan@harrow.org>"]
+description = "Exposes uk-areacode-rust lib as WASM for nodejs and browsers"
 edition = "2018"
+license = "ISC"
 name = "uk-areacodes-wasm"
+repository = "git+https://github.com/eharrow/uk-areacodes-wasm.git"
 version = "0.1.0"
 
 [lib]

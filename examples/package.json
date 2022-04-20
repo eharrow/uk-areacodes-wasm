@@ -1,0 +1,23 @@
+{
+  "name": "uk-areacodes-wasm",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">",
+  "main": "node.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eharrow/uk-areacodes-wasm.git"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eharrow/uk-areacodes-wasm/issues"
+  },
+  "homepage": "https://github.com/eharrow/uk-areacodes-wasm#readme"
+}
