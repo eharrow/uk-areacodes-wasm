@@ -19,7 +19,7 @@ pub fn main_js() -> Result<(), JsValue> {
 
 #[wasm_bindgen]
 pub fn find_code(numb: &str) -> String {
-    let data: Vec<api::Place> = api::init();
+    let data: Vec<api::Place> = api::load();
 
     let r = api::find_by_code(numb, &data);
     let area = match r {
