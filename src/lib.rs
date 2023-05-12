@@ -33,13 +33,13 @@ pub fn find_code(numb: &str) -> String {
 mod tests {
     use super::*;
 
-    # [test]
+    #[test]
     fn it_returns_code() {
         let place = find_code("01582");
         assert_eq!(place, "Luton");
     }
 
-    # [test]
+    #[test]
     fn it_returns_empty() {
         let place = find_code("invalid");
         assert_eq!(place, "");
