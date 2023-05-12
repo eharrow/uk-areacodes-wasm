@@ -26,7 +26,7 @@ pub fn find_code(numb: &str) -> String {
         Some(p) => &p.area,
         _ => "",
     };
-    return area.to_string();
+    area.to_string()
 }
 
 #[cfg(test)]
