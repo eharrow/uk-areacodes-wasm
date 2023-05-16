@@ -40,7 +40,7 @@ mod tests {
     }
 
     #[test]
-    fn it_returns_empty() {
+    fn it_returns_empty_for_invalid_code() {
         let place = find_code("invalid");
         assert_eq!(place, "");
     }
