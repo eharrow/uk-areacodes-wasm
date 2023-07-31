@@ -37,6 +37,6 @@ jobs:
       - name: Build package
         id: semver
         run: cargo semver bump patch >> $GITHUB_OUTPUT
-      - run: echo command succeeded as ${{GITHUB_OUTPUT}}
+      - run: echo "command succeeded as $GITHUB_OUTPUT"
       - run: wasm-pack build
 #      - run: gh release create ${{steps.semver.outputs.stdout}}
