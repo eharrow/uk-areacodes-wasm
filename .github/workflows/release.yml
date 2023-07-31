@@ -1,0 +1,40 @@
+name: Release
+
+on:
+  push:
+    branches: [ "main" ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            target/
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+
+      - name: Install
+        run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+      - run: cargo install cargo-semver --vers 1.0.0-alpha.3
+
+      - name: Build
+        run: cargo build
+
+      - name: Run tests
+        run: cargo test
+      - run: wasm-pack test --node
+      - run: wasm-pack test --headless --chrome
+      - run: wasm-pack test --headless --firefox
+
+      - name: Build package
+        run: cargo semver bump patch
+      - run: wasm-pack build
