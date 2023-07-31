@@ -36,7 +36,7 @@ jobs:
 
       - name: Build package
         id: semver
-        run: echo "new-semver=$(cargo semver bump patch)\n" >> $GITHUB_OUTPUT
+        run: echo "new-semver=$(cargo semver bump patch)" >> $GITHUB_OUTPUT
       - run: echo "command succeeded as ${{steps.semver.outputs.new-semver}}"
       - run: wasm-pack build
-#      - run: gh release create ${{steps.semver.outputs.stdout}}
+      - run: gh release create ${{steps.semver.outputs.new-semver}}
