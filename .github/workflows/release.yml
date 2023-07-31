@@ -35,5 +35,8 @@ jobs:
       - run: wasm-pack test --headless --firefox
 
       - name: Build package
+        id: semver
         run: cargo semver bump patch
+      - run: echo command succeeded as ${{steps.semver.outputs.stdout}}
       - run: wasm-pack build
+#      - run: gh release create ${{steps.semver.outputs.stdout}}
