@@ -23,7 +23,7 @@ jobs:
 
       - name: Install
         run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
-#      - run: cargo install cargo-semver --vers 1.0.0-alpha.3
+      - run: cargo install cargo-semver --vers 1.0.0-alpha.3
 
       - name: Build
         run: cargo build
