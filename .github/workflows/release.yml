@@ -39,4 +39,7 @@ jobs:
         run: echo "new-semver=$(cargo semver bump patch)" >> $GITHUB_OUTPUT
       - run: echo "command succeeded as ${{steps.semver.outputs.new-semver}}"
       - run: wasm-pack build
+
       - run: gh release create ${{steps.semver.outputs.new-semver}}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
