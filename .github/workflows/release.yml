@@ -40,12 +40,11 @@ jobs:
       - run: echo "command succeeded as ${{steps.semver.outputs.new-semver}}"
       - run: wasm-pack build
 
-      - name: Commit version change
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git commit -am "version bump"
-          git push
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          default_author: github_actions
+          message: "chore: version bump"
 
       - name: Tag release
         run: gh release create ${{steps.semver.outputs.new-semver}}
