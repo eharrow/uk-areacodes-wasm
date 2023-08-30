@@ -1,5 +1,5 @@
 [package]
-authors = ["Ewan Harrow <ewan@harrow.org>"]
+authors = ["Ewan Harrow"]
 description = "Exposes uk-areacode-rust lib as WASM for nodejs and browsers"
 edition = "2018"
 license = "ISC"
