@@ -1,4 +1,4 @@
-
+NPM
 
   <h1><code>uk-areacodes-wasm</code></h1>
 
@@ -29,3 +29,14 @@ wasm-pack test --headless --firefox
 ```
 wasm-pack publish
 ```
+
+## ☕️ Use from JS in a Browser
+In js-example-use use NPM with webpack to build a sample page to use the API.
+
+```
+cd js-example-use
+npm install
+npm run build
+```
+Examine the dist directory.  To spin up a test dev server to serve the file
+`npm run start` and open http://localhost:8080
