@@ -1,12 +1,12 @@
 <div align="center">
 
-  <h1><code>wasm-pack-template</code></h1>
+  <h1><code>uk-areacodes-wasm</code></h1>
 
-  <strong>A template for kick starting a Rust and WebAssembly project using <a href="https://github.com/rustwasm/wasm-pack">wasm-pack</a>.</strong>
+  <strong>Generates a WASM from uk-areacodes-rust.</strong>
 
-  <p>
-    <a href="https://travis-ci.org/rustwasm/wasm-pack-template"><img src="https://img.shields.io/travis/rustwasm/wasm-pack-template.svg?style=flat-square" alt="Build Status" /></a>
-  </p>
+![Build](https://github.com/eharrow/uk-areacodes-wasm/actions/workflows/rust.yml/badge.svg)
+![Release](https://github.com/eharrow/uk-areacodes-wasm/actions/workflows/release.yml/badge.svg)
+
 
   <h3>
     <a href="https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/index.html">Tutorial</a>
