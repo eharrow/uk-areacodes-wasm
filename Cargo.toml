@@ -5,7 +5,7 @@ edition = "2018"
 license = "ISC"
 name = "uk-areacodes-wasm"
 repository = "git+https://github.com/eharrow/uk-areacodes-wasm.git"
-version = "0.1.4"
+version = "0.1.5"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
