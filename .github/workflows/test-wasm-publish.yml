@@ -30,5 +30,4 @@ jobs:
         with:
           dot-npmrc: ${{ secrets.DOT_NPMRC }}
       - name: wasm-pack stuff
-        run: wasm-pack build
-      - run: wasm-pack login 
+        run: wasm-pack login -t oauth
