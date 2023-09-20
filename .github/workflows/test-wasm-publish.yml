@@ -5,7 +5,7 @@ on:
 
 env:
   CARGO_TERM_COLOR: always
-  NPM_TOKEN: ${{ secrets.DOT_NPMRC }}
+  NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
  
 jobs:
   release:
