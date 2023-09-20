@@ -22,8 +22,8 @@ jobs:
             target/
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
 
-
+      - run: wasm-pack build
       - run: npm publish
-        working-directory: ./pkg
+        working-directory: pkg
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
