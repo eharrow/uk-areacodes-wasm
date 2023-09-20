@@ -1,4 +1,4 @@
-name: Test WASM PACK
+name: Test-WASM-PACK
 
 on:
   workflow_dispatch:
