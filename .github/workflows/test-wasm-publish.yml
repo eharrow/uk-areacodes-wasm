@@ -24,4 +24,4 @@ jobs:
 
 
       - name: wasm-pack stuff
-        run: wasm-pack login -t oauth
+        run: npm login -t oauth
