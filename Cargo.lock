@@ -140,7 +140,7 @@ dependencies = [
 [[package]]
 name = "uk-areacodes"
 version = "0.1.0"
-source = "git+https://github.com/eharrow/uk-areacodes-rust#26a51a25fe26f49c2434a5f3ee1af183a0dd65be"
+source = "git+https://github.com/eharrow/uk-areacodes-rust#24d3df1e09a0a1e372127d4294e8da3e0e6b23f5"
 dependencies = [
  "serde",
  "serde_json",
