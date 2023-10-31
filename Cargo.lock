@@ -140,7 +140,7 @@ dependencies = [
 [[package]]
 name = "uk-areacodes"
 version = "0.1.0"
-source = "git+https://github.com/eharrow/uk-areacodes-rust#cb79d06c6a54cbfb8512a6ef544f3b61773aa47d"
+source = "git+https://github.com/eharrow/uk-areacodes-rust#24d3df1e09a0a1e372127d4294e8da3e0e6b23f5"
 dependencies = [
  "serde",
  "serde_json",
@@ -148,7 +148,7 @@ dependencies = [
 
 [[package]]
 name = "uk-areacodes-wasm"
-version = "0.1.4"
+version = "0.1.5"
 dependencies = [
  "console_error_panic_hook",
  "uk-areacodes",
