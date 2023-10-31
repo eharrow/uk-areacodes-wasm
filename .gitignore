@@ -4,3 +4,4 @@ bin/
 pkg/
 wasm-pack.log
 www/node_modules
+/js-example-use/dist/
