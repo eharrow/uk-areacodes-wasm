@@ -7,5 +7,5 @@ document.querySelector("button").addEventListener("click", () => {
 function lookup() {
   const p = document.getElementById("place").value;
   let res = wasm.find_code(p);
-  document.getElementById("target").innerHTML = res !== "" ? `✅ ${res}` : "❌ No match";
+  document.getElementById("target").innerHTML = res !== "" ? `🎉 ${res}` : "🙁 No match";
 }
