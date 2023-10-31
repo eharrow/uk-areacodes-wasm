@@ -16,6 +16,10 @@ module.exports = {
           from: "index.html",
           context: path.resolve(__dirname),
         },
+        {
+          from: "output.css",
+          context: path.resolve(__dirname),
+        },
       ],
     }),
     new WasmPackPlugin({
