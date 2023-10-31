@@ -1,20 +1,22 @@
 {
-  "name": "create-wasm-app",
+  "name": "js-example-wasm-app",
   "version": "^0.1.0",
   "description": "create an app to consume rust-generated wasm packages",
-  "bin": {
-    "create-wasm-app": ".bin/create-wasm-app.js"
-  },
   "scripts": {
-    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --config webpack.config.js",
-    "start": "NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server"
+    "build": "npm run build:tailwind && npm run build:dev",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch",
+    "build:tailwind": "npx tailwindcss -i ./main.css -o ./output.css"
   },
   "dependencies": {
     "uk-areacodes-wasm": "^0.1.0"
   },
   "devDependencies": {
     "@wasm-tool/wasm-pack-plugin": "1.5.0",
+    "autoprefixer": "^10.4.16",
     "copy-webpack-plugin": "^11.0.0",
+    "tailwindcss": "^3.3.5",
     "text-encoding": "^0.7.0",
     "webpack": "^5.49.0",
     "webpack-cli": "^4.7.2",
