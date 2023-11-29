@@ -38,9 +38,11 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version-file: '/js-example-use/package.json'
+          cache-dependency-path: '/js-example-use/package.json'
           node-version: 18
           cache: 'npm'
       - run: npm install
+        working-directory: js-example-use
       - name: Build
+        working-directory: js-example-use
         run: npm run build
