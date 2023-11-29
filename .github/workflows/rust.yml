@@ -35,3 +35,12 @@ jobs:
       - run: wasm-pack test --node
       - run: wasm-pack test --headless --chrome
       - run: wasm-pack test --headless --firefox
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '/js-example-use/package.json'
+          node-version: 18
+          cache: 'npm'
+      - run: npm install
+      - name: Build
+        run: npm run build
