@@ -10,7 +10,7 @@
     "build:tailwind": "npx tailwindcss -i ./main.css -o ./output.css"
   },
   "dependencies": {
-    "uk-areacodes-wasm": "^0.1.0"
+    "uk-areacodes-wasm": "^0.1.5"
   },
   "devDependencies": {
     "@wasm-tool/wasm-pack-plugin": "1.5.0",
