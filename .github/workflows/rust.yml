@@ -38,7 +38,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          cache-dependency-path: '/js-example-use/package.json'
+          cache-dependency-path: 'js-example-use/package.json'
           node-version: 18
           cache: 'npm'
       - run: npm install
