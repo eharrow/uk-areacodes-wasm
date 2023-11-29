@@ -28,7 +28,7 @@ features = ["console"]
 version = "0.3.65"
 
 [dev-dependencies]
-wasm-bindgen-test = "0.3.38"
+wasm-bindgen-test = "0.3.39"
 
 [profile.release]
 # Tell `rustc` to optimize for small code size.
