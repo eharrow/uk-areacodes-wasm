@@ -6,7 +6,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  call-workflow-2-in-local-repo:
+  call-workflow-build-in-local-repo:
     uses: ./.github/workflows/rust.yml
   dependabot:
     runs-on: ubuntu-latest
