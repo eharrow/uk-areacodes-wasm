@@ -1,6 +1,7 @@
 mod utils;
 
-use uk_areacodes::api::{self};
+use std::collections::HashMap;
+use uk_areacodes::api::{self, Place};
 use utils::set_panic_hook;
 use wasm_bindgen::prelude::*;
 
@@ -13,7 +14,7 @@ pub fn main_js() -> Result<(), JsValue> {
 
 #[wasm_bindgen]
 pub fn find_code(numb: &str) -> String {
-    let data: Vec<api::Place> = api::load();
+    let data: HashMap<String, Place> = api::load_as_map();
 
     let r = api::find_by_code(numb, &data);
     let area = match r {
