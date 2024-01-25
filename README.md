@@ -42,6 +42,4 @@ npm run build
 ```
 
 Examine the dist directory. To spin up a test dev server to serve the file
-`npx webpack serve` and open http://localhost:8080
-
-You can see it running deployed at http://blog.ewanharrow.com/uk-areacodes-wasm/
+`npm run start` and open http://localhost:8080
