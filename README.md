@@ -43,3 +43,5 @@ npm run build
 
 Examine the dist directory. To spin up a test dev server to serve the file
 `npm run start` and open http://localhost:8080
+
+You can see it running  at http://blog.ewanharrow.com/uk-areacodes-wasm/
