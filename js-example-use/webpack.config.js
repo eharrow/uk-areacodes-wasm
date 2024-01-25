@@ -4,10 +4,10 @@ const webpack = require("webpack");
 const WasmPackPlugin = require("@wasm-tool/wasm-pack-plugin");
 
 module.exports = {
-  entry: ["./bootstrap.js"],
+  entry: ["./init.js"],
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bootstrap.js",
+    filename: "init.js",
   },
   plugins: [
     new CopyPlugin({
