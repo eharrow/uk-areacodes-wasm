@@ -14,8 +14,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/cache@v3
+      - uses: actions/checkout@v4
+      - uses: actions/cache@v4
         with:
           path: |
             ~/.cargo/bin/
@@ -43,7 +43,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           cache-dependency-path: 'js-example-use/package.json'
-          node-version: 18
+          node-version: 20
           cache: 'npm'
       - run: npm install
         working-directory: js-example-use
