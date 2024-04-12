@@ -24,10 +24,7 @@ jobs:
             ~/.cargo/git/db/
             target/
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
-
-      - uses: ATiltedTree/setup-rust@v1
-        with:
-          rust-version: stable
+      - uses: hecrj/setup-rust-action@v2
       - name: Install wasm-pack
         run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
 
