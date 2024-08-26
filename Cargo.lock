@@ -107,9 +107,9 @@ dependencies = [
 
 [[package]]
 name = "const_panic"
-version = "0.2.8"
+version = "0.2.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6051f239ecec86fde3410901ab7860d458d160371533842974fc61f96d15879b"
+checksum = "7782af8f90fe69a4bb41e460abe1727d493403d8b2cc43201a3a3e906b24379f"
 dependencies = [
  "typewit",
 ]
@@ -625,7 +625,7 @@ checksum = "e36a83ea2b3c704935a01b4642946aadd445cea40b10935e3f8bd8052b8193d6"
 [[package]]
 name = "uk-areacodes"
 version = "0.1.0"
-source = "git+https://github.com/eharrow/uk-areacodes-rust#7ecd62c7f314fa80ec06fc044dfa6bec0074348d"
+source = "git+https://github.com/eharrow/uk-areacodes-rust#9edecd1ae1afdc510621a39deace03767c6a3001"
 dependencies = [
  "color-eyre",
  "const_panic",
