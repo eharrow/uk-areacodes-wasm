@@ -16,7 +16,7 @@
     "@wasm-tool/wasm-pack-plugin": "1.7.0",
     "autoprefixer": "^10.4.20",
     "copy-webpack-plugin": "^12.0.2",
-    "tailwindcss": "^3.4.15",
+    "tailwindcss": "^3.4.16",
     "text-encoding": "^0.7.0",
     "webpack": "^5.97.1",
     "webpack-cli": "^5.1.4",
