@@ -645,7 +645,7 @@ checksum = "e36a83ea2b3c704935a01b4642946aadd445cea40b10935e3f8bd8052b8193d6"
 [[package]]
 name = "uk-areacodes"
 version = "0.1.0"
-source = "git+https://github.com/eharrow/uk-areacodes-rust#3ca9d38388f52e97e8b80663baa0cb2e961ba358"
+source = "git+https://github.com/eharrow/uk-areacodes-rust#9a04c5af8fc6091554f80e5e2cc80b1f763e2d34"
 dependencies = [
  "color-eyre",
  "const_panic",
