@@ -38,7 +38,7 @@ jobs:
       - run: wasm-pack test --headless --chrome
       - run: wasm-pack test --headless --firefox
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           cache-dependency-path: 'js-example-use/package.json'
           node-version: 20
