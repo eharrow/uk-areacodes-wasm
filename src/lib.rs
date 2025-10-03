@@ -12,6 +12,13 @@ pub fn main_js() -> Result<(), JsValue> {
     Ok(())
 }
 
+#[wasm_bindgen(getter_with_clone)]
+pub struct JSPlace {
+    pub area: String,
+    pub lat: String,
+    pub lon: String,
+}
+
 #[wasm_bindgen]
 pub fn find_code(numb: &str) -> String {
     let data: HashMap<String, Place> = api::load_as_map();
@@ -22,6 +29,25 @@ pub fn find_code(numb: &str) -> String {
         None => "",
     };
     area.to_string()
+}
+
+#[wasm_bindgen]
+pub fn find_place_by_code(numb: &str) -> JSPlace {
+    let data: HashMap<String, Place> = api::load_as_map();
+
+    let r = api::find_by_code(numb, &data);
+    match r {
+        Some(p) => JSPlace {
+            area: p.area.clone(),
+            lat: p.lat.clone().unwrap(),
+            lon: p.lon.clone().unwrap(),
+        },
+        None => JSPlace {
+            area: "".to_string(),
+            lat: "".to_string(),
+            lon: "".to_string(),
+        },
+    }
 }
 
 pub fn starts_with_code(numb: &str) -> String {
@@ -45,6 +71,14 @@ mod tests {
     }
 
     #[test]
+    fn it_returns_find_place_by_code() {
+        let place = find_place_by_code("01582");
+        assert_eq!(place.area, "Luton");
+        assert_eq!(place.lat, "51.8784385");
+        assert_eq!(place.lon, "-0.4152837");
+    }
+
+    #[test]
     fn it_returns_empty_for_invalid_code() {
         let place = find_code("invalid");
         assert_eq!(place, "");
@@ -54,6 +88,7 @@ mod tests {
     fn it_returns_starts_with() {
         let place = starts_with_code("01582 12345678");
         assert_eq!(place, "Luton");
+        println!("Place: {}", place);
     }
 
     #[test]
