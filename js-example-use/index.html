@@ -4,12 +4,16 @@
   <meta charset="utf-8">
   <title>UK Area Code To Place</title>
   <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body class="bg-white dark:bg-slate-800">
 <noscript>This page contains webassembly and javascript content, please enable javascript in your
   browser.
 </noscript>
 <script src="init.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
 <main class="mt-12 lg:mt-32">
   <section class="container mx-auto px-6">
     <div class="w-full lg:flex items-center">
@@ -34,7 +38,16 @@
         <div id="target" class="mb-3 text-lg font-light text-gray-800 dark:text-gray-400">&nbsp;</div>
       </div>
     </div>
+    <!-- Map Container with Tailwind Classes -->
+    <div id="map" class="w-full h-96 z-0"></div>
   </section>
 </main>
 </body>
 </html>
+<script>
+  // var map = L.map('map').setView([51.505, -0.09], 13);
+  // L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  //   maxZoom: 19,
+  //   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  // }).addTo(map);
+</script>
