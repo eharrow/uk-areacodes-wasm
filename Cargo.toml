@@ -1,6 +1,6 @@
 [package]
 name = "uk-areacodes-wasm"
-version = "0.1.5"
+version = "0.1.6"
 authors = ["Ewan Harrow"]
 edition = "2018"
 license = "ISC"
