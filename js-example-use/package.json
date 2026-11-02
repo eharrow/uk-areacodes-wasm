@@ -19,7 +19,7 @@
     "tailwindcss": "^4.3.3",
     "text-encoding": "^0.7.0",
     "webpack": "^5.112.2",
-    "webpack-cli": "^7.2.3",
+    "webpack-cli": "^7.3.1",
     "webpack-dev-server": "^6.1.0"
   }
 }
